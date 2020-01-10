@@ -1,30 +1,17 @@
-console.log("test");
-
-var findDigit = function(num, nth){
-    let n;
-    num = num.toString().split("").reverse();
-    if (num[num.length-1] === "-") {
-        num.pop(num[num.length-1])
-    }
-    // num.join(""); 
-    // else {
-    //     n = num.charAt(nth - 1);
-    // }
-    // for (i = 0; i <= num.length; i++) {
-    //     if(num[i] === "-") {
-    //         num[i]
-    //     }
-    // }
-    
-    // num.split(" ").reverse().join("");
-    if (nth -1 > num.length) {
-      n = 0;
-    } else {
-    n = num[nth - 1]
-    }
-    return n;
+function cubeOdd(arr) {
+if (arr.every( el => typeof el === "number")) {
+  return arr.filter(i=>i%2!==0).map(el=>Math.pow(el, 3)).reduce((a,b) =>a +b);
+  // return arr.map(e=>Math.pow(e ,3));
+} else {
+  return undefined;
 }
+  // insert code here >.<
+  
+  
+  //return 0;
+  }
+console.log(cubeOdd([1, 2, 3, 4]));
 
-
-
-console.log(findDigit(-5673, 4));
+// Test.assertEquals(cubeOdd([1, 2, 3, 4]), 28);
+// Test.assertEquals(cubeOdd([-3,-2,2,3]), 0);
+// Test.assertEquals(cubeOdd(["a",12,9,"z",42]), undefined);
