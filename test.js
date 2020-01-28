@@ -1,11 +1,19 @@
-function reverseInvert(array){
-  return array.filter(a => a === parseInt(a)).map(el => {
-    if (el >= 0) {
-      return (''+el).split('').reverse().join('')*-1;
-    } else {
-      return (''+el).split('').reverse().join('').replace(/-/g, '')*1;
-    }
-  })
+// function invertHash(o) {
+//   return Object.keys(o).reduce((r,k)=>(r[o[k]]=k,r),{})
+// }
+
+function invertHash(hash) {
+  var arr=[];
+  for (var key in hash)
+  {
+    var a=[]
+    a.push(hash[key],key);
+    arr.push(a);
+  }
+  var c={}
+  for (var i=0; i<arr.length; ++i)
+    c[arr[i][0]]=arr[i][1];
+  return c;
 }
 
-console.log(reverseInvert([1,-23,3,4,5]))
+console.log(invertHash({a:1, b:2, c:3}))
