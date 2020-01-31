@@ -1,14 +1,13 @@
-function root(x, n) {
-  return Math.pow(x, 1.0 / n);
+var min = function(list){
+    list.sort((a, b) => a - b);
+  return list[0];
+}
+
+var max = function(list){
+    list.sort((a, b) => b -a);
+  return list[0];
 }
 
 
-console.log(root(8, 3))
+console.log();
 
-// function powerOfTwo(x) {
-//   return Math.log2(x) % 1 === 0;
-// }
-
-// function powerOfTwo(x) {
-//   return (Math.log(x)/Math.log(2)) % 1 === 0;
-// }
