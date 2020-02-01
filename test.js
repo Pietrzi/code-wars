@@ -1,13 +1,7 @@
-var min = function(list){
-    list.sort((a, b) => a - b);
-  return list[0];
-}
-
-var max = function(list){
-    list.sort((a, b) => b -a);
-  return list[0];
+function digitize(n) {
+  return n.toString().split("").reverse().map(el => parseInt(el, 10));
 }
 
 
-console.log();
+console.log(digitize(35231));
 
