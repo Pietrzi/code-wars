@@ -1,13 +1,6 @@
-// function squareSum(numbers){
-//   let arr =[];
-//   for (let i = 0; i < numbers.length; i++) {
-//     arr.push(numbers[i] * numbers[i])
-//   }
-//   return arr.length > 1 ? arr.reduce((a, b) => a + b) : 0
-// }
+function check(a,x){
+  return a.includes(x);
+};
 
-const squareSum = numbers => numbers.length > 1 ? numbers.map(el => el * el).reduce((a, b) => a + b) : 0
-
-
-console.log(squareSum([0, 3, 4, 5]));
+console.log(check([80, 117, 115, 104, 45, 85, 112, 115], 45));
 
