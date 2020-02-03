@@ -1,6 +1,6 @@
-function check(a,x){
-  return a.includes(x);
-};
+function sumMix(x){
+  return x.map(el =>typeof el === "string" ? parseInt(el) : el).reduce((a, b) => a + b)
+}
 
-console.log(check([80, 117, 115, 104, 45, 85, 112, 115], 45));
+console.log(sumMix(['5', '0', 9, 3, 2, 1, '9', 6, 7]));
 
