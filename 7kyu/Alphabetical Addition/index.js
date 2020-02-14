@@ -42,6 +42,6 @@ function addLetters() {
     if (sum == 0)
       sum+= 26;
     sum--
-    sum% =26;
+    sum%=26 ;
     return String.fromCharCode(sum+'a'.charCodeAt());
   }
