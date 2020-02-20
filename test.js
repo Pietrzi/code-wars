@@ -1,11 +1,7 @@
 function noBoringZeros(n) {
-  let a;
-  //if (n % 100 === 0 ) {
-    a = n / 10
-  //}
-  return a
+  return !n-- || n % 9 % 2 === 1;
 }
 
 
-console.log(noBoringZeros(1890));
+console.log(noBoringZeros(22));
 
