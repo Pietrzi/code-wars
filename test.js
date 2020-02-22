@@ -1,7 +1,13 @@
-function noBoringZeros(n) {
-  return !n-- || n % 9 % 2 === 1;
+function maxMultiple(divisor, bound){
+  let arr =[];
+  for(let i = 1; i <= bound; i++) {
+    if(i % divisor === 0) {
+      arr.push(i);
+    }
+  } 
+  return arr;
 }
 
 
-console.log(noBoringZeros(22));
+console.log(maxMultiple(2, 7));
 
