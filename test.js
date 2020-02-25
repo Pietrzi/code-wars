@@ -1,13 +1,11 @@
-function maxMultiple(divisor, bound){
-  let arr =[];
-  for(let i = 1; i <= bound; i++) {
-    if(i % divisor === 0) {
-      arr.push(i);
-    }
-  } 
+function twoOldestAges(ages){
+  let arr = [];
+  let sorted = ages.sort((a,b) => a + b);
+  arr.push(sorted[0]);
+  arr.push(sorted[1]);
   return arr;
-}
+  }
 
 
-console.log(maxMultiple(2, 7));
+console.log(twoOldestAges( [1, 2, 10, 8] ));
 
