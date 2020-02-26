@@ -21,3 +21,20 @@ function twoOldestAges(ages){
     arr.push(sorted[1]);
     return arr;
 }
+
+
+// 2
+
+const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2);
+
+
+// 3
+
+function twoOldestAges(ages){
+ages.sort(function(a, b) {
+    return a - b;
+  });
+    let oldest = ages.pop();
+    let secondOldest = ages.pop();
+    return [secondOldest,oldest];
+}
