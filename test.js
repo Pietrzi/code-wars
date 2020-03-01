@@ -1,12 +1,15 @@
-function nbYear(p0, percent, aug, p) {
-  let years = 0;
-  while (p0 < p) {
-  p0 + (p0*percent/100) + aug;
-  years++;
+Array.prototype.numberOfOccurrences = function(num) {
+  let count = 0;
+  if (this.indexOf(num) >= 0) {
+    this.forEach(el => {
+      if (num == el) {
+        count += 1;
+      }
+    });
   }
-  return years;
+  return count;
 }
 
 
-console.log(nbYear(1500, 5, 100, 5000));
+// console.log(nbYear(1500, 5, 100, 5000));
 //console.log("click")

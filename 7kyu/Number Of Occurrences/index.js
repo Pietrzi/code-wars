@@ -47,4 +47,4 @@ Array.prototype.numberOfOccurrences = function(num) {
       });
     }
     return count;
-  }
+}
